@@ -12,7 +12,21 @@ func TestCalculateUpdatedSize(t *testing.T) {
 		args args
 		want int
 	}{
-		// TODO: Add test cases.
+		{
+			name: "testCase1",
+			args:args{11,10},
+			want:12,
+		},
+		{
+			name: "testCase2",
+			args:args{05,30},
+			want:6,
+		},
+		{
+			name: "testCase3",
+			args:args{1007,300},
+			want:4028,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
