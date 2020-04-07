@@ -8,9 +8,11 @@ import (
 	"os"
 )
 
+var testing = ioutil.ReadFile
+
 // Converts given YAML file to json , Takes filename as input and returns results as interface.
 func yamlToJSON(filename string) []map[string]interface{} {
-	file, err := ioutil.ReadFile(filename)
+	file, err := testing(filename)
 	checkError(err)
 
 	data, err := yaml.YAMLToJSON(file)

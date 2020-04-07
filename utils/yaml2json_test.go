@@ -1,9 +1,15 @@
 package utils
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
+
+func mockFuck(filename){
+	fmt.Println("Hell yeag!")
+
+} 
 
 func Test_yamlToJSON(t *testing.T) {
 	type args struct {
@@ -14,7 +20,11 @@ func Test_yamlToJSON(t *testing.T) {
 		args args
 		want []map[string]interface{}
 	}{
-		// TODO: Add test cases.
+		{
+			name: "testCase1",
+			args:args "kartik",
+			want:{"kartik"},	
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
